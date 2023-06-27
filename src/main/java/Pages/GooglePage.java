@@ -9,8 +9,8 @@ public class GooglePage {
     @FindBy(id = "APjFqb")
     public WebElement searchField;
 
-    @FindBy(className = "gNO89b")
-    public WebElement clickSearchGoogleButton;
+    @FindBy(xpath = "//*/center/input[1]")
+    public WebElement searchGoogleButton;
 
     public GooglePage(WebDriver driver) {
         this.driver = driver;
@@ -21,7 +21,7 @@ public class GooglePage {
     }
 
     public void clickSearchButton() {
-        clickSearchGoogleButton.click();
+        searchGoogleButton.click();
     }
 
 }
